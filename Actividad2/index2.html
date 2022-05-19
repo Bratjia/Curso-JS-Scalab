@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Evaluación</title>
 </head>
 <body>
     <script src="./index2.js"></script>
     <h1>Evaluaciones</h1>
     <label id="lblEstudiante">Ingrese el nombre del estudiante: </label> <br>
-    <input type="text" id="fname" name="fname" size="15"> 
-    <input type="button" id="btnEnviarnombre" onclick= "enviarNombre()"  value="Enviar"> 
-    
-   
+
+    <form id="primero">        
+        <input type="text" id="fname" name="fname" size="15"> 
+        <input type="button" id="btnEnviarnombre" onclick= "enviarNombre()"  value="Enviar">    
+    </form>
+    <form id="segundo" style="display: none;">
+        <h5>Ingrese las notas</h5>
+        <label id="lblnota1">Nota 1: </label>
+        <input type="text" id="txtNota1" name="txtNota1" size="5"> <br>
+        <label id="lblnota2">Nota 2: </label>
+        <input type="text" id="txtNota2" name="txtNota2" size="5"> <br>
+        <label id="lblnota3">Nota 3: </label>
+        <input type="text" id="txtNota3" name="txtNota2" size="5"> <br>
+        <input type="button" id="btnEnviarnotas" onclick= "pedirNotas()"  value="Enviar"> 
+        
+    </form>
 </body>
 </html>
