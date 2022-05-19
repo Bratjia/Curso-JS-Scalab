@@ -19,23 +19,70 @@ function pedirNotas(){
     
     console.log("largo "+notas.length);
     
-    let notaMinima= 70*60/100; //42
+    let notaMinima= 70*60/100; // nota * % /100
     
 
     for (let i=0 ; i<notas.length; i++){
+
+
+        
+        switch (i) {
+            case 0:
+                if( notas[i] >= notaMinima){
+                    document.getElementById("lblaprobar1").innerHTML=  "Aprobado"; 
+
+                }else{
+                    document.getElementById("lblaprobar1").innerHTML=  "Desaprobado"; 
+                }
+            break;
+            case 1:
+                if( notas[i] >= notaMinima){
+
+                    document.getElementById("lblaprobar2").innerHTML=  "Aprobado";
+                }else{
+                    document.getElementById("lblaprobar2").innerHTML=  "Desaprobado";
+          
+                }
+                console.log("case 1 ");
+            break;
+            case 2:
+                if( notas[i] >= notaMinima){
+                    document.getElementById("lblaprobar3").innerHTML=  "Aprobado";        
+                 }else{
+                    document.getElementById("lblaprobar3").innerHTML=  "Desaprobado";        
+                }
+                console.log("case 2");
+            break;
+            default:
+              break;
+          }
+
+
+
+
+
+
+/*
+
+
        // console.log("nota :"+notas[i]);
         //console.log("posicion i  "+i);
        if( notas[i] >= notaMinima){
-        document.getElementById("lblaprobar1").innerHTML=  "Aprobado"  ; 
+        document.getElementById("lblaprobar1").innerHTML=  "Aprobado"; 
+        document.getElementById("lblaprobar2").innerHTML=  "Aprobado";
+        document.getElementById("lblaprobar3").innerHTML=  "Aprobado";
 
-        console.log("posicionnn"+i);
-        console.log("nota aprobada "+notas[i]);
+      //  console.log("posicionnn"+i);
+        //console.log("nota aprobada "+notas[i]);
 
        }else{
-        console.log("posicion"+i);
-        console.log("nota desaprobada "+notas[i]);
+        document.getElementById("lblaprobar1").innerHTML=  "Desaprobado"; 
+        document.getElementById("lblaprobar2").innerHTML=  "Desaprobado";
+        document.getElementById("lblaprobar3").innerHTML=  "Desaprobado";
+        //console.log("posicion"+i);
+        //console.log("nota desaprobada "+notas[i]);
 
-       }
+       } */
 
     }
 
