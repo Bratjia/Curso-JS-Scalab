@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang=”en”>
+    <meta charset=”UTF-8″ />
+<head>
+    <title>VENTA DE ENTRADAS-Evaluación1</title>
+</head>
+<body>
+    <script src="./index.js"></script>
+ <h1>VENTA DE ENTRADAS</h1>
+    <form id="form" >
+        <p>Seleccione Evento<br>
+            <label class="radio-inline">
+                <br>
+                <input type="radio" value="venta1" name="evento" onclick= miFunc(value)>Metallica
+                <div id="valor1" style="display:none;">Valor entrada: 5000</div> 
+                <input type="radio" value="venta2" name="evento" onclick= miFunc(value)>Daddy Yankee <br>
+                <div id="valor2" style="display:none;"> Valor entrada:2000</div> <br>
+                <input type="radio" value="venta3" name="evento" onclick= miFunc(value)>Peppa pig
+                <div id="valor3" style="display:none;"> Valor entrada:8000</div>
+            </label>
+        </p>          
+        <label >Ingrese Número de entradas </label>
+        <input  type="number" id="valorContador" >  <br>
+        <button type="button" onclick= totalAPagar()>Comprar</button> 
+ 
+    </form>
+
+</body>
+</html>

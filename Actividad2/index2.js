@@ -16,12 +16,26 @@ function pedirNotas(){
     notas.push(document.getElementById("txtNota2").value);
     notas.push(document.getElementById("txtNota3").value);
     console.log(notas);
-    console.log(notaMinima);
+    
+    console.log("largo "+notas.length);
+    
     let notaMinima= 70*60/100; //42
-    for (let i=0 ; i<notas.length; i++){
-       if( i > notaMinima)
+    
 
-        console.log(notaMinima);
+    for (let i=0 ; i<notas.length; i++){
+       // console.log("nota :"+notas[i]);
+        //console.log("posicion i  "+i);
+       if( notas[i] >= notaMinima){
+        document.getElementById("lblaprobar1").innerHTML=  "Aprobado"  ; 
+
+        console.log("posicionnn"+i);
+        console.log("nota aprobada "+notas[i]);
+
+       }else{
+        console.log("posicion"+i);
+        console.log("nota desaprobada "+notas[i]);
+
+       }
 
     }
 
