@@ -16,9 +16,12 @@
         <input type="button" id="btnEnviarnombre" onclick= "enviarNombre()"  value="Enviar">    
     </form>
     <form id="segundo" style="display: none;">
+        <h5>Ingrese el porcentaje de aprobación</h5>
+        <input type="text" id="txtporcentaje" name="txtporcentaje" size="2">
+        <label id="lblnota1">% </lSabel>  <br>
         <h5>Ingrese las notas</h5>
         <label id="lblnota1">Nota 1: </lSabel>
-        <input type="text" id="txtNota1" name="txtNota1" size="5">
+        <input type="text" id="txtNota1" name="txtNota1" size="5"  min="10" max="70">
         <label id="lblaprobar1"> </label>  <br>
 
         <label id="lblnota2">Nota 2: </label>
