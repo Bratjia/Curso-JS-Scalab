@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+</head>
+<body>
+
+    <h1>LOGIN</h1>
+
+   <form id="formulario" name="formulario" method="POST">
+     <div>
+
+
+     <label>
+       <p>Password</p>
+       <input type="password" id="password" name="password" placeholder="password" />
+     </label>
+     <label>
+        <p>userName</p>
+        <input type="text" id="userName" name="userName" placeholder="userName"   />
+      </label>
+       <button  type="submit" onclick="Login()">Login</button>
+   </div>
+   </form>
+
+ </body>
+ 
+ <script>
+function Login(){
+ let form = document.forms["formulario"];
+ let fd = new FormData(form);
+ let data = {};
+
+ for (let [key, prop] of fd) {
+   data[key] = prop;
+ }
+
+ VALUE = JSON.stringify(data, null, 2);
+ console.log(VALUE);
+
+const url= "https://randomuser.me/api/";
+const myHeaders = new Headers();
+
+myHeaders.append('Content-Type', 'application/json');
+
+ fetch()(url, {
+         method: "POST",
+             headers: {
+           "Content-Type": "application/json",
+         },
+         body: VALUE,
+       })
+       .then(data => data.json())
+ .then(data =>  { console.log(data) })
+ .catch((err) => {
+     console.error(err);
+     })
+}
+ </script>
+</html>
